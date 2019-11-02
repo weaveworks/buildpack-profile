@@ -4,7 +4,7 @@ This is a Buildpack quickstart profile for EKS and Firekube.
 
 ## Prepare Docker Hub Credential
 
-Put your Docker ID and password, and create a secret using the following command:
+Put your Docker username and password, and create a secret using the following command:
 
 ```
 $ cat <<EOF | kubectl apply -f -
@@ -16,8 +16,8 @@ metadata:
     build.pivotal.io/docker: index.docker.io
 type: kubernetes.io/basic-auth
 stringData:
-  username: <Your Docker ID>
-  password: <Your Docker Token>
+  username: <username>
+  password: <password>
 EOF
 ```
 
